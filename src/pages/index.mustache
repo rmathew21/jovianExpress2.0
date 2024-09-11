@@ -151,7 +151,7 @@
             </li>
             <li>
               <a href="https://www.jovian.com/data-science-bootcampt">
-                Jovian Data Science Bootcamp
+                Jovian Data Science Bootcamp 
               </a>
             </li>
           </ol>
@@ -159,11 +159,33 @@
       </div>
     </div>
 
-    <!-- JOBS -->
+    <!-- Jobs Section -->
     <div class="container px-4 mt-5">
       <h2 class="text-center mb-4">Job Opportunities</h2>
-      <!-- Jobs List -->
+
+      <!-- Jobs List for mobile -->
       <div class="d-md-none">
+        {{#jobs}}
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/jobs/{{id}}">{{title}}</a></h5>
+            <h6 class="card-subtitle my-1 text-body-secondary">
+              {{location}} • {{salary}}
+            </h6>
+            <small class="card-text text-body-secondary">
+              Posted {{posted}}
+            </small>
+          </div>
+        </div>
+        {{/jobs}}
+      </div>
+    </div>
+
+    <!-- JOBS -->
+    <!-- <div class="container px-4 mt-5">
+      <h2 class="text-center mb-4">Job Opportunities</h2> -->
+      <!-- Jobs List -->
+      <!-- <div class="d-md-none">
         <div class="card mb-3">
           <div class="card-body">
             <h5 class="card-title">Frontend Developer</h5>
@@ -215,9 +237,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Jobs table on large screen -->
-      <div class="offset-lg-2 col-lg-8">
+      <!-- <div class="offset-lg-2 col-lg-8">
         <table class="d-none d-md-table table table-striped table-bordered">
           <tr class="table-primary text-center">
             <th rowspan="2">Job Title</th>
@@ -260,11 +282,11 @@
             <td>Sep 19, 2022</td>
           </tr>
         </table>
-      </div>
-    </div>
+      </div> -->
+    
 
     <!-- Application Form -->
-    <div class="container px-4 mt-5">
+    <!-- <div class="container px-4 mt-5">
       <h2 class="text-center">Submit Your Application</h2>
 
       <form
@@ -273,9 +295,9 @@
         enctype="multipart/form-data"
         class="col-lg-8 offset-lg-2"
       >
-        <div class="col-lg-8"></div>
+        <div class="col-lg-8"></div> -->
         <!-- name  -->
-        <div class="mb-3" col-sm-6>
+        <!-- <div class="mb-3" col-sm-6>
           <label for="fullname" class="form-label"> Full Name </label>
           <input
             type="text"
@@ -285,10 +307,10 @@
             placeholder="John doe"
             id="fullname"
           />
-        </div>
+        </div> -->
 
         <!-- EMAIL -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="email" class="form-label">Email address</label>
           <input
             type="email"
@@ -302,10 +324,10 @@
           <div id="emailHelp" class="form-text">
             We'll never share your email with anyone else.
           </div>
-        </div>
+        </div> -->
 
         <!-- phone  -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="phone" class="form-label">Phone</label>
           <input
             type="tel"
@@ -315,10 +337,10 @@
             name="phone"
             required
           />
-        </div>
+        </div> -->
 
         <!-- DOB -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="dob" class="form-label">Date of Birth</label>
           <input
             type="date"
@@ -327,10 +349,10 @@
             name="dob"
             required
           />
-        </div>
+        </div> -->
 
         <!-- Position -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="position" class="form-label">Position Applied for</label>
           <select
             class="form-select"
@@ -343,10 +365,10 @@
             <option value="data scientist">Data Scientist</option>
             <option value="ml engineer">ML Engineer</option>
           </select>
-        </div>
+        </div> -->
 
         <!-- Resume -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="resume" class="form-label">Upload Resume</label>
           <input
             type="file"
@@ -355,10 +377,10 @@
             name="resume"
             required
           />
-        </div>
+        </div> -->
 
         <!-- Cover Letter -->
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="resume" class="form-label">Cover Letter</label>
           <textarea
             placeholder=" Why should we consider you for the job?"
@@ -369,22 +391,22 @@
             required
           >
           </textarea>
-        </div>
+        </div> -->
 
         <!-- Terms -->
-        <div class="mb-3 form-check">
+        <!-- <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="terms" />
           <label class="form-check-label" for="terms">
             I agree to the terms and conditions.
           </label>
-        </div>
+        </div> -->
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">
+        <!-- <button type="submit" class="btn btn-primary">
           Submit Application
         </button>
       </form>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <div class="container">
