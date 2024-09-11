@@ -17,6 +17,15 @@ app.get('/', (req, res) => {
     // console.log(JOBS);
 });
 
+app.get('/jobs/:id', (req, res) => {
+    const id = req.params.id;
+    console.log('req.params', req.params);
+
+    const matchedJob = JOBS.find(job => job.id.toString() === id);
+    res.render('job', { job: matchedJob});
+    console.log('matchedJob', matchedJob);
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
