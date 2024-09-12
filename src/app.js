@@ -1,9 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const JOBS = require('./jobs');
 const mustacheExpress = require('mustache-express');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -24,6 +29,17 @@ app.get('/jobs/:id', (req, res) => {
     const matchedJob = JOBS.find(job => job.id.toString() === id);
     res.render('job', { job: matchedJob});
     console.log('matchedJob', matchedJob);
+});
+
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: 
+    {
+        user: process.env.EMAIL_ID,
+        pass: process.env.EMAIL_PASSWORD
+    }
 });
 
 const port = process.env.PORT || 3000;
